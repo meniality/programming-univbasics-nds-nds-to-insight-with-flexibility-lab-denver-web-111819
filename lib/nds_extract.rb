@@ -99,7 +99,7 @@ def movies_with_directors_set(source)
   while i < source.length do
     director_info_hash = source[i]
     director_name = director_info_hash[:name]
-    directors_movies = dir_info_hash[:movies]
+    directors_movies = director_info_hash[:movies]
     a_o_a_movies_by_dir << movies_with_director_key(director_name, directors_movies)
     i += 1
   end 
