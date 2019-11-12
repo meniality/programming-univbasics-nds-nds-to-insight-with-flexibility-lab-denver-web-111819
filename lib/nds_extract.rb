@@ -93,22 +93,17 @@ end
 
 
 def movies_with_directors_set(source)
-  directors_with_movies_hash = {}
+  directors_with_movies_array = []
   
   i = 0
   while i < source.length do
-    name = source[i][:name]
-    movies_array = []
-    
-    movie_index = 0
-    while movie_index < source[i][:movies].length do
-      movies_array.push(source[i][:movies][movie_index][:title])
-      movie_index += 1
-    end
-    directors_with_movies_hash[name] = movies_array
+    director_info_hash = source[i]
+    director_name = director_info_hash[:name]
+    directors_movies = dir_info_hash[:movies]
+    a_o_a_movies_by_dir << movies_with_director_key(director_name, directors_movies)
     i += 1
-  end
-  directors_with_movies_hash
+  end 
+  directors_with_movies_array
 end
   # GOAL: For each director, find their :movies Array and stick it in a new Array
   #
