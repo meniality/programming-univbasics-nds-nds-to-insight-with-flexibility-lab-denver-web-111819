@@ -35,10 +35,11 @@ end
 
 def movies_with_director_key(name, movies_collection)
   
+  movies_and_directors_array = []
   i = 0 
   while i < movies_collection.length do
     movie_data = movies_collection[i]
-    
+    movies_and_directors_array.push()
   end
   
 end
