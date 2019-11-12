@@ -71,7 +71,9 @@ def gross_per_studio(collection)
   while i < collection.length do
     studio_name = collection[i][:studio]
     if !studios_gross_hash[studio_name]
-      studios_gross_hash[studio_name]=  collection[:]
+      studios_gross_hash[studio_name]=  collection[:worldwide_gross]
+    else studios_gross_hash
+    end
   end
 end
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
