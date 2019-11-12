@@ -102,11 +102,11 @@ def movies_with_directors_set(source)
     
     movie_index = 0
     while movies_array < source[i].length do
-      movies_array.push(source[i][:movies])
+      movies_array.push(source[i][:movies][movie_index][:title])
     end
-    
+    movie_index += 1
   end
-  
+  movies_with_directors_hash
 end
   # GOAL: For each director, find their :movies Array and stick it in a new Array
   #
